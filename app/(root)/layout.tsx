@@ -6,8 +6,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // test again
-
   return (
     <div className="flex h-screen flex-col">
       <Header />
