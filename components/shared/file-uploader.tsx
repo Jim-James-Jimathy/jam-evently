@@ -1,12 +1,9 @@
 "use client";
 
-// GLOBAL
 import { useCallback, Dispatch, SetStateAction } from "react";
-import { generateClientDropzoneAccept } from "uploadthing/client";
-import type { FileWithPath } from "@uploadthing/react";
 import { useDropzone } from "@uploadthing/react/hooks";
+import { generateClientDropzoneAccept } from "uploadthing/client";
 
-// LOCAL
 import { Button } from "@/components/ui/button";
 import { convertFileToUrl } from "@/lib/utils";
 
@@ -16,12 +13,12 @@ type FileUploaderProps = {
   setFiles: Dispatch<SetStateAction<File[]>>;
 };
 
-export default function FileUploader({
+export function FileUploader({
   imageUrl,
   onFieldChange,
   setFiles,
 }: FileUploaderProps) {
-  const onDrop = useCallback((acceptedFiles: FileWithPath[]) => {
+  const onDrop = useCallback((acceptedFiles: File[]) => {
     setFiles(acceptedFiles);
     onFieldChange(convertFileToUrl(acceptedFiles[0]));
   }, []);
@@ -59,7 +56,7 @@ export default function FileUploader({
           <h3 className="mb-2 mt-2">Drag photo here</h3>
           <p className="p-medium-12 mb-4">SVG, PNG, JPG</p>
           <Button type="button" className="rounded-full">
-            Select from computer
+            Select from your computer
           </Button>
         </div>
       )}

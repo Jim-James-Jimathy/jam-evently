@@ -11,7 +11,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 // local
-import FileUploader from "./file-uploader";
+import { FileUploader } from "./file-uploader";
 import {
   Form,
   FormControl,
