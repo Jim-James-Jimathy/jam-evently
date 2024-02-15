@@ -7,8 +7,6 @@ import MobileNav from "./shared/mobile-nav";
 import { Button } from "./ui/button";
 
 const Header = () => {
-  // const open = false;
-
   return (
     <header className="w-full border-b">
       <div className="wrapper flex items-center justify-between">
