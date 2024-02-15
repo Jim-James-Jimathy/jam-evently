@@ -1,12 +1,12 @@
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../ui/button";
+
 import NavItems from "./nav-items";
 import MobileNav from "./mobile-nav";
+import { Button } from "../ui/button";
 
 const Header = () => {
-  // test
   return (
     <header className="w-full border-b">
       <div className="wrapper flex items-center justify-between">
